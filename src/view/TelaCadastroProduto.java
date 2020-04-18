@@ -45,26 +45,29 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cadTxtDescProduto = new javax.swing.JTextField();
-        cadCBChapasProduto = new javax.swing.JComboBox<>();
+        cadCBCatProduto = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        cadCBPecaProduto = new javax.swing.JComboBox<>();
+        cadCBUnidProduto = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        cadTxtPrecoCProduto = new javax.swing.JFormattedTextField();
+        cadTxtCustoProduto = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btncadNovo = new javax.swing.JButton();
         btncadSalvar = new javax.swing.JButton();
         btncadCancelar = new javax.swing.JButton();
-        cadTxtICMSProduto = new javax.swing.JFormattedTextField();
+        cadTxtMinProduto = new javax.swing.JFormattedTextField();
         btncadEditar = new javax.swing.JButton();
         btncadExcluir = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         cadTxtFornProduto = new javax.swing.JTextField();
-        cadTxtPrecoVProduto = new javax.swing.JFormattedTextField();
+        cadTxtPrecoProduto = new javax.swing.JFormattedTextField();
         jSeparator2 = new javax.swing.JSeparator();
         btncadAjuda = new javax.swing.JButton();
-        cadTxtCodProduto = new javax.swing.JFormattedTextField();
+        cadTxtCodBarProduto = new javax.swing.JFormattedTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        cadTxtMaxProduto = new javax.swing.JFormattedTextField();
         jPanel2 = new javax.swing.JPanel();
         cadTxtPesqProduto = new javax.swing.JTextField();
         btncadPesquisar = new javax.swing.JButton();
@@ -103,7 +106,7 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Código");
+        jLabel2.setText("Código de barras");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setText("Descrição");
@@ -116,26 +119,26 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
         cadTxtDescProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        cadCBChapasProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cadCBChapasProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chapas", "Eletrônicos", "Peças", "Insumos" }));
-        cadCBChapasProduto.setToolTipText("");
-        cadCBChapasProduto.addActionListener(new java.awt.event.ActionListener() {
+        cadCBCatProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cadCBCatProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Chapas", "Eletrônicos", "Peças", "Insumos" }));
+        cadCBCatProduto.setToolTipText("");
+        cadCBCatProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadCBChapasProdutoActionPerformed(evt);
+                cadCBCatProdutoActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel6.setText("ICMS R$");
+        jLabel6.setText("Estoque mínimo");
 
-        cadCBPecaProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cadCBPecaProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Peça", "M²", "Litros", "Peso" }));
-        cadCBPecaProduto.setToolTipText("");
+        cadCBUnidProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cadCBUnidProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Peça", "M²", "Litros", "Peso" }));
+        cadCBUnidProduto.setToolTipText("");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Preço de Custo  R$");
 
-        cadTxtPrecoCProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        cadTxtCustoProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("Preço de Venda R$");
@@ -167,7 +170,7 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
             }
         });
 
-        cadTxtICMSProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        cadTxtMinProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
         btncadEditar.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         btncadEditar.setText("Editar");
@@ -182,26 +185,28 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
         cadTxtFornProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        cadTxtPrecoVProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        cadTxtPrecoProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
         btncadAjuda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btncadAjuda.setText("Ajuda");
 
-        cadTxtCodProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("0"))));
-        cadTxtCodProduto.setEnabled(false);
-        cadTxtCodProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cadTxtCodBarProduto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel13.setText("Estoque máximo");
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        cadTxtMaxProduto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(291, 291, 291)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(btncadCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btncadNovo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -212,43 +217,48 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cadTxtPrecoVProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cadTxtPrecoCProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(68, 68, 68)))
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cadTxtICMSProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel5))
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cadTxtFornProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadTxtDescProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadTxtCodProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cadTxtCodBarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cadTxtFornProduto)
+                                    .addComponent(cadTxtDescProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cadCBChapasProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4))
-                                .addGap(30, 30, 30)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(cadCBPecaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cadTxtCustoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cadCBCatProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel4))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(cadCBUnidProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cadTxtPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel6)
+                                    .addComponent(cadTxtMinProduto, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(cadTxtMaxProduto)))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jLabel1)))
+                .addGap(39, 39, 39))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,23 +266,27 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btncadNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btncadSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btncadEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btncadExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btncadCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(btncadAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btncadNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btncadSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btncadEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btncadExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btncadCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)
+                                .addComponent(btncadAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(19, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(cadTxtCodProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cadTxtCodBarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
@@ -284,29 +298,41 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cadCBChapasProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cadCBPecaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(cadTxtPrecoCProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(cadTxtICMSProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cadTxtPrecoVProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cadCBCatProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cadCBUnidProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(30, 30, 30)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(cadTxtCustoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cadTxtPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSeparator3)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(cadTxtMinProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(jLabel13)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(cadTxtMaxProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())))))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 20, 720, 340);
+        jPanel1.setBounds(10, 20, 710, 340);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -343,25 +369,26 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btncadPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cadTxtPesqProduto)))
+                .addGap(0, 20, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(jLabel11))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(295, 295, 295)
                         .addComponent(jLabel10))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btncadPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel12)
-                                    .addComponent(cadTxtPesqProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(23, 23, 23))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel11)
-                .addGap(321, 321, 321))
+                        .addGap(152, 152, 152)
+                        .addComponent(jLabel12)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,15 +409,15 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(10, 360, 720, 360);
+        jPanel2.setBounds(10, 360, 710, 360);
 
-        setSize(new java.awt.Dimension(756, 771));
+        setSize(new java.awt.Dimension(747, 771));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadCBChapasProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadCBChapasProdutoActionPerformed
+    private void cadCBCatProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadCBCatProdutoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cadCBChapasProdutoActionPerformed
+    }//GEN-LAST:event_cadCBCatProdutoActionPerformed
 
     private void btncadCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncadCancelarActionPerformed
         dispose();
@@ -403,13 +430,16 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
     private void btncadSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncadSalvarActionPerformed
 
-        modprod.setDescrProduct(cadTxtDescProduto.getText());
-        modprod.setCatProduct((String) cadCBChapasProduto.getSelectedItem());
-        modprod.setProviderProduct((String) cadTxtFornProduto.getText());
-        modprod.setCoastProduct(Double.parseDouble(cadTxtPrecoCProduto.getText().replace(",", ".")));
-        modprod.setCoastSellProduct(Double.parseDouble(cadTxtPrecoVProduto.getText().replace(",", ".")));
-        modprod.setIcmsProduct(Double.parseDouble(cadTxtICMSProduto.getText().replace(",", ".")));
-        modprod.setUnitMeasure((String) cadCBPecaProduto.getSelectedItem());
+        modprod.setCodBarProduto(cadTxtCodBarProduto.getText());
+        modprod.setDescrProduto(cadTxtDescProduto.getText());
+        modprod.setFornecProduto(cadTxtFornProduto.getText());
+        modprod.setCatProduto((cadCBCatProduto.getSelectedItem().toString()));
+        modprod.setCustoProduto(Double.parseDouble(cadTxtCustoProduto.getText().replaceAll(",",".")));
+        modprod.setCustoVendaProduto(Double.parseDouble(cadTxtPrecoProduto.getText().replaceAll(",",".")));
+        modprod.setUnidMedida(cadCBUnidProduto.getSelectedItem().toString());
+        modprod.setMinProduto(Double.parseDouble(cadTxtMinProduto.getText().replaceAll(",",".")));
+        modprod.setMaxProduto(Double.parseDouble(cadTxtMaxProduto.getText().replaceAll(",",".")));     
+        
         control.save(modprod);
         limparCampos();
     }//GEN-LAST:event_btncadSalvarActionPerformed
@@ -425,22 +455,24 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
     
     public void bloqCampos(){
         cadTxtDescProduto.setEnabled(false);
-        cadCBChapasProduto.setEnabled(false);
+        cadCBCatProduto.setEnabled(false);
         cadTxtFornProduto.setEnabled(false);
-        cadTxtPrecoCProduto.setEnabled(false);
-        cadTxtPrecoVProduto.setEnabled(false);
-        cadTxtICMSProduto.setEnabled(false);
-        cadCBPecaProduto.setEnabled(false);  
+        cadTxtCustoProduto.setEnabled(false);
+        cadTxtPrecoProduto.setEnabled(false);
+        cadTxtMinProduto.setEnabled(false);
+        cadTxtMaxProduto.setEnabled(false);
+        cadCBUnidProduto.setEnabled(false);  
     }
     
     public void desbloqCampos(){
         cadTxtDescProduto.setEnabled(true);
-        cadCBChapasProduto.setEnabled(true);
+        cadCBCatProduto.setEnabled(true);
         cadTxtFornProduto.setEnabled(true);
-        cadTxtPrecoCProduto.setEnabled(true);
-        cadTxtPrecoVProduto.setEnabled(true);
-        cadTxtICMSProduto.setEnabled(true);
-        cadCBPecaProduto.setEnabled(true);
+        cadTxtCustoProduto.setEnabled(true);
+        cadTxtPrecoProduto.setEnabled(true);
+        cadTxtMinProduto.setEnabled(true);
+        cadTxtMaxProduto.setEnabled(true);
+        cadCBUnidProduto.setEnabled(true);
     }
     
     public void bloqueio() {
@@ -460,14 +492,15 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
     
     public void condicaoBloqueio(){
         String a = (String) cadTxtDescProduto.getText();
-        String b = (String) cadCBChapasProduto.getSelectedItem();
+        String b = (String) cadCBCatProduto.getSelectedItem();
         String c = (String) cadTxtFornProduto.getText();
-        String d = (String) cadTxtPrecoCProduto.getText();
-        String e = (String) cadTxtPrecoVProduto.getText();
-        String f = (String) cadTxtICMSProduto.getText();
-        String g = (String) cadCBPecaProduto.getSelectedItem();       
+        String d = (String) cadTxtCustoProduto.getText();
+        String e = (String) cadTxtPrecoProduto.getText();
+        String f = (String) cadTxtMinProduto.getText();
+        String g = (String) cadTxtMaxProduto.getText();
+        String h = (String) cadCBUnidProduto.getSelectedItem();       
        
-        if ((a.equals(""))||(b.equals(""))||(c.equals(""))||(d.equals(""))||(e.equals(""))||(f.equals(""))||(g.equals(""))){
+        if ((a.equals(""))||(b.equals(""))||(c.equals(""))||(d.equals(""))||(e.equals(""))||(f.equals(""))||(g.equals(""))||(h.equals(""))){
             bloqueio();
         } else {
             btncadSalvar.setEnabled(true);
@@ -475,14 +508,16 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
     }
     
     private void limparCampos(){
-        cadTxtCodProduto.setText("");
+        cadTxtCodBarProduto.setText("");
         cadTxtDescProduto.setText("");
-        cadCBChapasProduto.setSelectedItem("");
+        cadCBCatProduto.setSelectedItem("");
         cadTxtFornProduto.setText("");
-        cadTxtPrecoCProduto.setText("");
-        cadTxtPrecoVProduto.setText("");
-        cadTxtICMSProduto.setText("");
-        cadCBPecaProduto.setSelectedItem(""); 
+        cadTxtCustoProduto.setText("");
+        cadTxtPrecoProduto.setText("");
+        cadTxtMinProduto.setText("");
+        cadTxtMaxProduto.setText("");
+        cadCBUnidProduto.setSelectedItem("");
+        
     }
    
     
@@ -532,20 +567,22 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
     private javax.swing.JButton btncadNovo;
     private javax.swing.JButton btncadPesquisar;
     private javax.swing.JButton btncadSalvar;
-    private javax.swing.JComboBox<String> cadCBChapasProduto;
-    private javax.swing.JComboBox<String> cadCBPecaProduto;
+    private javax.swing.JComboBox<String> cadCBCatProduto;
+    private javax.swing.JComboBox<String> cadCBUnidProduto;
     private javax.swing.JTable cadResultProduto;
-    private javax.swing.JFormattedTextField cadTxtCodProduto;
+    private javax.swing.JFormattedTextField cadTxtCodBarProduto;
+    private javax.swing.JFormattedTextField cadTxtCustoProduto;
     private javax.swing.JTextField cadTxtDescProduto;
     private javax.swing.JTextField cadTxtFornProduto;
-    private javax.swing.JFormattedTextField cadTxtICMSProduto;
+    private javax.swing.JFormattedTextField cadTxtMaxProduto;
+    private javax.swing.JFormattedTextField cadTxtMinProduto;
     private javax.swing.JTextField cadTxtPesqProduto;
-    private javax.swing.JFormattedTextField cadTxtPrecoCProduto;
-    private javax.swing.JFormattedTextField cadTxtPrecoVProduto;
+    private javax.swing.JFormattedTextField cadTxtPrecoProduto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -560,6 +597,7 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 

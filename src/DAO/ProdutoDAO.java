@@ -19,22 +19,27 @@ public class ProdutoDAO {
     
     public void save(ModelProduto modprod){ //este método salva todas as informações inseridas no frames no BD
         conect.conexao();
+        
         try {
-            PreparedStatement pst = conect.connection.prepareStatement("INSERT INTO tb_produto(descr_produto, forn_produto, cat_produto, unid_produto, preco_produto, precovenda_produto, icms_produto ) VALUES(?, ?, ?, ?, ?, ?, ?);");
+            PreparedStatement pst = conect.connection.prepareStatement("INSERT INTO tb_produto(cod_produto, descr_produto, cat_produto, forn_produto, custo_produto, venda_produto, unid_produto, estoquemin_produto, estoquemax_produto ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);");
       
-            pst.setString(1, modprod.getDescrProduct());
-            pst.setString(2, modprod.getProviderProduct());
-            pst.setString(3, modprod.getCatProduct());
-            pst.setString(4, modprod.getUnitMeasure());
-            pst.setDouble(5, modprod.getCoastProduct());
-            pst.setDouble(6, modprod.getCoastSellProduct());
-            pst.setDouble(7, modprod.getIcmsProduct());
+            pst.setString(1, modprod.getCodBarProduto());
+            pst.setString(2, modprod.getDescrProduto());
+            pst.setString(3, modprod.getCatProduto());
+            pst.setString(4, modprod.getFornecProduto());
+            pst.setDouble(5, modprod.getCustoProduto());
+            pst.setDouble(6, modprod.getCustoVendaProduto());
+            pst.setString(7, modprod.getUnidMedida());
+            pst.setDouble(8, modprod.getMinProduto());
+            pst.setDouble(9, modprod.getMaxProduto());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Dados inseridos com sucesso!");
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Erro ao inserir os dados: \n"+ex);
+            JOptionPane.showMessageDialog(null, "Erro ao inserir os dados: \n" + ex);
+            
         }
+        
         
         conect.desconecta();
     }

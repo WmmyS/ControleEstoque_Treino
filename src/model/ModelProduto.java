@@ -7,76 +7,140 @@ package model;
 
 public class ModelProduto {
 
-    public int getCodProduct() {
-        return codProduct;
+    /**
+     * @return the codBarProduto
+     */
+    public String getCodBarProduto() {
+        return codBarProduto;
     }
 
-    public void setCodProduct(int codProduct) {
-        this.codProduct = codProduct;
+    /**
+     * @param codBarProduto the codBarProduto to set
+     */
+    public void setCodBarProduto(String codBarProduto) {
+        this.codBarProduto = codBarProduto;
     }
 
-    public String getDescrProduct() {
-        return descrProduct;
+    /**
+     * @return the descrProduto
+     */
+    public String getDescrProduto() {
+        return descrProduto;
     }
 
-    public void setDescrProduct(String descrProduct) {
-        this.descrProduct = descrProduct;
+    /**
+     * @param descrProduto the descrProduto to set
+     */
+    public void setDescrProduto(String descrProduto) {
+        this.descrProduto = descrProduto;
     }
 
-    public String getCatProduct() {
-        return catProduct;
+    /**
+     * @return the catProduto
+     */
+    public String getCatProduto() {
+        return catProduto;
     }
 
-    public void setCatProduct(String catProduct) {
-        this.catProduct = catProduct;
+    /**
+     * @param catProduto the catProduto to set
+     */
+    public void setCatProduto(String catProduto) {
+        this.catProduto = catProduto;
     }
 
-    public String getProviderProduct() {
-        return providerProduct;
+    /**
+     * @return the fornecProduto
+     */
+    public String getFornecProduto() {
+        return fornecProduto;
     }
 
-    public void setProviderProduct(String providerProduct) {
-        this.providerProduct = providerProduct;
+    /**
+     * @param fornecProduto the fornecProduto to set
+     */
+    public void setFornecProduto(String fornecProduto) {
+        this.fornecProduto = fornecProduto;
     }
 
-    public double getCoastProduct() {
-        return coastProduct;
+    /**
+     * @return the custoProduto
+     */
+    public double getCustoProduto() {
+        return custoProduto;
     }
 
-    public void setCoastProduct(double coastProduct) {
-        this.coastProduct = coastProduct;
+    /**
+     * @param custoProduto the custoProduto to set
+     */
+    public void setCustoProduto(double custoProduto) {
+        this.custoProduto = custoProduto;
     }
 
-    public double getCoastSellProduct() {
-        return coastSellProduct;
+    /**
+     * @return the custoVendaProduto
+     */
+    public double getCustoVendaProduto() {
+        return custoVendaProduto;
     }
 
-    public void setCoastSellProduct(double coastSellProduct) {
-        this.coastSellProduct = coastSellProduct;
+    /**
+     * @param custoVendaProduto the custoVendaProduto to set
+     */
+    public void setCustoVendaProduto(double custoVendaProduto) {
+        this.custoVendaProduto = custoVendaProduto;
     }
 
-    public double getIcmsProduct() {
-        return icmsProduct;
+    /**
+     * @return the unidMedida
+     */
+    public String getUnidMedida() {
+        return unidMedida;
     }
 
-    public void setIcmsProduct(double icmsProduct) {
-        this.icmsProduct = icmsProduct;
+    /**
+     * @param unidMedida the unidMedida to set
+     */
+    public void setUnidMedida(String unidMedida) {
+        this.unidMedida = unidMedida;
     }
 
-    public String getUnitMeasure() {
-        return unitMeasure;
+    /**
+     * @return the minProduto
+     */
+    public double getMinProduto() {
+        return minProduto;
     }
 
-    public void setUnitMeasure(String unitMeasure) {
-        this.unitMeasure = unitMeasure;
+    /**
+     * @param minProduto the minProduto to set
+     */
+    public void setMinProduto(double minProduto) {
+        this.minProduto = minProduto;
     }
-    private int codProduct ;
-    private String descrProduct ;
-    private String catProduct;
-    private String providerProduct;
-    private double coastProduct;
-    private double coastSellProduct;
-    private double icmsProduct;
-    private String unitMeasure;
+
+    /**
+     * @return the maxProduto
+     */
+    public double getMaxProduto() {
+        return maxProduto;
+    }
+
+    /**
+     * @param maxProduto the maxProduto to set
+     */
+    public void setMaxProduto(double maxProduto) {
+        this.maxProduto = maxProduto;
+    }
+
+    private String codBarProduto ;
+    private String descrProduto ;
+    private String catProduto;
+    private String fornecProduto;
+    private double custoProduto;
+    private double custoVendaProduto;
+    private String unidMedida;
+    private double minProduto;
+    private double maxProduto;
  
 }
